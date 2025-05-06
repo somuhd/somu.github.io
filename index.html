@@ -12,53 +12,86 @@
             margin: 0;
             background: #f5f7fa;
             color: #333;
+            line-height: 1.6;
         }
 
         header {
             background: #1e3a8a;
             color: white;
-            padding: 2rem;
+            padding: 2.5rem;
             text-align: center;
+            border-bottom: 5px solid #0c2461;
         }
 
         header h1 {
             margin: 0.2em 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
         }
 
         section {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 1rem;
+            max-width: 960px;
+            margin: 3rem auto;
+            padding: 2rem;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
             color: #1e3a8a;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
         }
 
         ul {
-            padding-left: 1.2em;
+            padding-left: 1.5em;
+        }
+
+        ul li {
+            margin: 0.5rem 0;
         }
 
         .contact {
             text-align: center;
             margin-top: 2rem;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
 
         .footer {
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem;
             background-color: #1e3a8a;
             color: white;
-            margin-top: 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .highlight {
+            color: #ff9f00;
+            font-weight: bold;
+        }
+
+        .experience h3 {
+            color: #333;
+            font-size: 1.5rem;
+        }
+
+        .experience ul {
+            margin-top: 1rem;
         }
     </style>
 </head>
 
 <body>
+
     <header>
         <h1>Somaling Dinnimani</h1>
         <p>DevOps Engineer | AWS Certified | Kubernetes | Terraform | CI/CD Specialist</p>
@@ -66,38 +99,48 @@
 
     <section>
         <h2>Professional Summary</h2>
-        <p>DevOps Engineer with nearly 3 years of experience specializing in CI/CD pipelines, cloud infrastructure (AWS), container orchestration (Kubernetes), and infrastructure as code (Terraform). Strong background in automation, configuration management, and cross-team collaboration.</p>
+        <p>DevOps Engineer with nearly 3 years of experience specializing in CI/CD pipelines, cloud infrastructure (AWS), container orchestration (Kubernetes), and infrastructure as code (Terraform). Skilled in automation, configuration management, and cross-team collaboration. Passionate about optimizing cloud systems and enhancing developer workflows.</p>
     </section>
 
     <section>
         <h2>Technical Skills</h2>
         <ul>
-            <li>Cloud: AWS (EKS, EC2, S3, IAM, VPC, ASG)</li>
-            <li>Containers & Orchestration: Docker, Kubernetes</li>
-            <li>CI/CD: Jenkins, Bamboo</li>
-            <li>IaC: Terraform</li>
-            <li>Scripting: Bash, Python</li>
-            <li>Monitoring: Prometheus, Grafana</li>
-            <li>Others: GitHub, Maven, Nexus, SonarQube, Tomcat</li>
+            <li><span class="highlight">Cloud:</span> AWS (EKS, EC2, S3, IAM, VPC, ASG)</li>
+            <li><span class="highlight">Containers & Orchestration:</span> Docker, Kubernetes</li>
+            <li><span class="highlight">CI/CD:</span> Jenkins, Bamboo</li>
+            <li><span class="highlight">IaC:</span> Terraform</li>
+            <li><span class="highlight">Scripting:</span> Bash, Python</li>
+            <li><span class="highlight">Monitoring:</span> Prometheus, Grafana</li>
+            <li><span class="highlight">Others:</span> GitHub, Maven, Nexus, SonarQube, Tomcat</li>
         </ul>
     </section>
 
-    <section>
+    <section class="experience">
         <h2>Experience</h2>
+        
+        <h3>DevOps Engineer – Infosys</h3>
+        <p><strong>Client: Leading Global Retailer</strong></p>
+        <ul>
+            <li>Built scalable, secure CI/CD pipelines using Jenkins and Terraform for infrastructure provisioning.</li>
+            <li>Led containerization efforts by migrating legacy applications to Docker and managing deployments with Kubernetes.</li>
+            <li>Optimized monitoring and alerting systems using Prometheus and Grafana, reducing response time by 30%.</li>
+            <li>Automated infrastructure deployments and scaling using AWS CloudFormation and Terraform.</li>
+        </ul>
+
         <h3>DevOps Engineer – Cognizant Technology Solutions</h3>
         <p><strong>Client: Fresenius Kabi</strong></p>
         <ul>
-            <li>Built robust CI/CD pipelines using Bamboo and shell/python scripts.</li>
+            <li>Built robust CI/CD pipelines using Bamboo and shell/Python scripts.</li>
             <li>Managed Kubernetes clusters using kubeadm and EKS.</li>
             <li>Deployed microservices using Helm charts.</li>
             <li>Monitored infrastructure with Prometheus and Grafana.</li>
-            <li>Improved SonarQube quality gate standards.</li>
+            <li>Improved SonarQube quality gate standards, reducing technical debt.</li>
         </ul>
         <p><strong>Client: Walgreens</strong></p>
         <ul>
-            <li>Configured Jenkins with Maven, Nexus, and SonarQube.</li>
-            <li>Containerized Jenkins using Docker for better scalability.</li>
-            <li>Led build and release processes and CI/CD optimization.</li>
+            <li>Configured Jenkins with Maven, Nexus, and SonarQube for continuous integration and delivery.</li>
+            <li>Containerized Jenkins using Docker for improved scalability and stability.</li>
+            <li>Led build and release processes, optimizing CI/CD pipelines and improving overall development speed.</li>
         </ul>
     </section>
 
@@ -115,8 +158,9 @@
     </section>
 
     <footer class="footer">
-        &copy; 2025 Somaling Dinnimani. All rights reserved.
+        <p>&copy; 2025 Somaling Dinnimani. All rights reserved.</p>
     </footer>
+
 </body>
 
 </html>
