@@ -1,166 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somaling Dinnimani | DevOps Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            background: #f5f7fa;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background: #1e3a8a;
-            color: white;
-            padding: 2.5rem;
-            text-align: center;
-            border-bottom: 5px solid #0c2461;
-        }
-
-        header h1 {
-            margin: 0.2em 0;
-            font-size: 2.5rem;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            margin: 0.5rem 0;
-        }
-
-        section {
-            max-width: 960px;
-            margin: 3rem auto;
-            padding: 2rem;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #1e3a8a;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        ul {
-            padding-left: 1.5em;
-        }
-
-        ul li {
-            margin: 0.5rem 0;
-        }
-
-        .contact {
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 1.5rem;
-            background-color: #1e3a8a;
-            color: white;
-            margin-top: 3rem;
-        }
-
-        .footer p {
-            margin: 0;
-        }
-
-        .highlight {
-            color: #ff9f00;
-            font-weight: bold;
-        }
-
-        .experience h3 {
-            color: #333;
-            font-size: 1.5rem;
-        }
-
-        .experience ul {
-            margin-top: 1rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AarodhaTech DevOps Course</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #0078d7;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0, 120, 215, 0.3);
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      letter-spacing: 1.2px;
+    }
+    header p {
+      font-size: 1.2rem;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    nav a {
+      margin: 0 15px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #0078d7;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #005a9e;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #0078d7;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #0078d7;
+      padding-bottom: 6px;
+    }
+    .course-info, .course-syllabus, .download-section, .contact-section {
+      margin-bottom: 40px;
+    }
+    ul.syllabus {
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-bottom: 30px;
+    }
+    ul.syllabus li {
+      margin-bottom: 12px;
+      font-weight: 500;
+      color: #444;
+    }
+    .btn-primary, .btn-download {
+      display: inline-block;
+      background: #0078d7;
+      color: white;
+      padding: 14px 28px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 120, 215, 0.3);
+      cursor: pointer;
+      border: none;
+      user-select: none;
+    }
+    .btn-primary:hover, .btn-download:hover {
+      background: #005a9e;
+      box-shadow: 0 6px 15px rgba(0, 90, 158, 0.5);
+    }
+    .images-row {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .images-row img {
+      width: 150px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .images-row img:hover {
+      transform: scale(1.05);
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #0078d7;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      border-color: #0078d7;
+      outline: none;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    /* Modal styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: white;
+      padding: 25px 30px;
+      border-radius: 8px;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      animation: fadeIn 0.4s ease forwards;
+    }
+    .modal-content p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      color: #333;
+    }
+    .close-btn {
+      background: #0078d7;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .close-btn:hover {
+      background: #005a9e;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      main {
+        padding: 20px;
+      }
+      .btn-primary, .btn-download {
+        padding: 12px 20px;
+        font-size: 1rem;
+      }
+      .images-row img {
+        width: 120px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-    <header>
-        <h1>Somaling Dinnimani</h1>
-        <p>DevOps Engineer | AWS Certified | Kubernetes | Terraform | CI/CD Specialist</p>
-    </header>
+  <header>
+    <h1>AarodhaTech DevOps Course</h1>
+    <p>Become a certified DevOps engineer with hands-on practical training</p>
+  </header>
 
-    <section>
-        <h2>Professional Summary</h2>
-        <p>DevOps Engineer with nearly 3 years of experience specializing in CI/CD pipelines, cloud infrastructure (AWS), container orchestration (Kubernetes), and infrastructure as code (Terraform). Skilled in automation, configuration management, and cross-team collaboration. Passionate about optimizing cloud systems and enhancing developer workflows.</p>
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#syllabus">Syllabus</a>
+    <a href="#download">Download</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="overview" class="course-info">
+      <h2>Course Overview</h2>
+      <p>Our DevOps course is designed to equip you with the skills needed to implement continuous integration and continuous deployment (CI/CD), automate infrastructure, and work with modern DevOps tools like Docker, Kubernetes, Jenkins, and Terraform.</p>
+      <div class="images-row" aria-label="DevOps related images">
+        <img src="https://images.unsplash.com/photo-1581091870628-60aa15881b4c?auto=format&fit=crop&w=150&q=80" alt="DevOps teamwork" />
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=150&q=80" alt="Software deployment" />
+        <img src="https://images.unsplash.com/photo-1537432376769-00a7a2c2e1d6?auto=format&fit=crop&w=150&q=80" alt="Coding on laptop" />
+      </div>
     </section>
 
-    <section>
-        <h2>Technical Skills</h2>
-        <ul>
-            <li><span class="highlight">Cloud:</span> AWS (EKS, EC2, S3, IAM, VPC, ASG)</li>
-            <li><span class="highlight">Containers & Orchestration:</span> Docker, Kubernetes</li>
-            <li><span class="highlight">CI/CD:</span> Jenkins, Bamboo</li>
-            <li><span class="highlight">IaC:</span> Terraform</li>
-            <li><span class="highlight">Scripting:</span> Bash, Python</li>
-            <li><span class="highlight">Monitoring:</span> Prometheus, Grafana</li>
-            <li><span class="highlight">Others:</span> GitHub, Maven, Nexus, SonarQube, Tomcat</li>
-        </ul>
+    <section id="syllabus" class="course-syllabus">
+      <h2>What You Will Learn</h2>
+      <ul class="syllabus">
+        <li>Introduction to DevOps Culture & Practices</li>
+        <li>Version Control with Git & GitHub</li>
+        <li>Continuous Integration using Jenkins & GitHub Actions</li>
+        <li>Containerization with Docker</li>
+        <li>Orchestration using Kubernetes</li>
+        <li>Infrastructure as Code with Terraform</li>
+        <li>Monitoring and Logging Tools</li>
+        <li>Cloud Platforms: AWS & Azure Basics</li>
+      </ul>
     </section>
 
-    <section class="experience">
-        <h2>Experience</h2>
-        
-        <h3>DevOps Engineer – Infosys</h3>
-        <p><strong>Client: Leading Global Retailer</strong></p>
-        <ul>
-            <li>Built scalable, secure CI/CD pipelines using Jenkins and Terraform for infrastructure provisioning.</li>
-            <li>Led containerization efforts by migrating legacy applications to Docker and managing deployments with Kubernetes.</li>
-            <li>Optimized monitoring and alerting systems using Prometheus and Grafana, reducing response time by 30%.</li>
-            <li>Automated infrastructure deployments and scaling using AWS CloudFormation and Terraform.</li>
-        </ul>
-
-        <h3>DevOps Engineer – Cognizant Technology Solutions</h3>
-        <p><strong>Client: Fresenius Kabi</strong></p>
-        <ul>
-            <li>Built robust CI/CD pipelines using Bamboo and shell/Python scripts.</li>
-            <li>Managed Kubernetes clusters using kubeadm and EKS.</li>
-            <li>Deployed microservices using Helm charts.</li>
-            <li>Monitored infrastructure with Prometheus and Grafana.</li>
-            <li>Improved SonarQube quality gate standards, reducing technical debt.</li>
-        </ul>
-        <p><strong>Client: Walgreens</strong></p>
-        <ul>
-            <li>Configured Jenkins with Maven, Nexus, and SonarQube for continuous integration and delivery.</li>
-            <li>Containerized Jenkins using Docker for improved scalability and stability.</li>
-            <li>Led build and release processes, optimizing CI/CD pipelines and improving overall development speed.</li>
-        </ul>
+    <section id="download" class="download-section">
+      <h2>Download Course Materials</h2>
+      <p>Get the complete course handbook and sample projects to practice offline.</p>
+      <button class="btn-download" id="downloadBtn">Download PDF</button>
     </section>
 
-    <section>
-        <h2>Education & Certification</h2>
-        <ul>
-            <li>B.E in Electronics and Communication, KLE Technological University</li>
-            <li>Diploma in Electronics and Communication, DTE Karnataka</li>
-            <li>AWS Certified Cloud Practitioner (Valid till 2026)</li>
-        </ul>
+    <section id="contact" class="contact-section">
+      <h2>Contact AarodhaTech</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required />
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required />
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your message here..." required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
     </section>
+  </main>
 
-    <section class="contact">
-        <p>📧 somuhd16@gmail.com | 📱 +91 8553212251</p>
-    </section>
+  <footer>
+    &copy; 2025 AarodhaTech. All rights reserved.
+  </footer>
 
-    <footer class="footer">
-        <p>&copy; 2025 Somaling Dinnimani. All rights reserved.</p>
-    </footer>
+  <!-- Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+    <div class="modal-content">
+      <p id="modalDesc">Your download will start shortly...</p>
+      <button class="close-btn" id="closeModal">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // Modal logic for download button
+    const downloadBtn = document.getElementById('downloadBtn');
+    const modal = document.getElementById('modal');
+    const closeModalBtn = document.getElementById('closeModal');
+
+    downloadBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      // Simulate a download by opening a sample PDF after a delay (replace with real file link)
+      setTimeout(() => {
+        window.open('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', '_blank');
+      }, 1000);
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    // Close modal if click outside modal content
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+    // Simple contact form validation and submission
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = contactForm.name.value.trim();
+      const email = contactForm.email.value.trim();
+      const message = contactForm.message.value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please fill all required fields.');
+        return;
+      }
+
+      // Simple email format check
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      alert(`Thank you, ${name}! Your message has been sent.`);
+      contactForm.reset();
+    });
+  </script>
 
 </body>
-
 </html>
